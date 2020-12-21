@@ -1,0 +1,72 @@
+---
+title: Title
+subtitle: Subtitle
+author: Martin Svensson
+institute: Department of Mathematics and Computer Science
+titlegraphic: SDUBLACKRGBpng.png 
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: ms_svm-latex-beamer.tex
+    keep_tex: true
+    latex_engine: xelatex # pdflatex also works here
+    dev: cairo_pdf 
+    slide_level: 3
+make149: true
+mainfont: "Open Sans" 
+titlefont: "Titillium Web"
+toc: true
+---
+
+```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
+knitr::opts_chunk$set(cache=TRUE)
+knitr::opts_chunk$set(fig.path='figs/')
+knitr::opts_chunk$set(cache.path='cache/')
+
+knitr::opts_chunk$set(
+                  fig.process = function(x) {
+                      x2 = sub('-\\d+([.][a-z]+)$', '\\1', x)
+                      if (file.rename(x, x2)) x2 else x
+                      }
+                  )
+
+library(tidyverse)
+library(stevemisc)
+#Cannot get the tikz device to print maths formuale. When annotating
+#plots with mathematical formulae, use dev = 'tikz' in chunk
+library(tikzDevice)
+options(tikzMetricPackages = c("\\usepackage[utf8]{inputenc}"))
+```
+
+
+# A heading
+
+## A subheading
+
+Various text
+
+1. text 1
+2. text 2
+
+\pause 
+
+\begin{itemize}[<+->]
+\item Text 1
+\item Text 2
+\end{itemize}
+
+### A table 
+
+|                         | Column 1       | Column 2 |
+|-------------------------|---------------------|------------------|
+| **Line 1**          |  A, **B**         |  **A**, B       |
+| **Line 2**             |   **C**, D        |  C, **D**        |
+
+Text
+
+- Item 1
+- Item 2
+
+
+
+

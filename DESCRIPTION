@@ -1,0 +1,16 @@
+Package: MSBeamerPresentation
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R: person("Martin", "Svensson", email = "svensson@imada.sdu.dk", role = c("aut", "cre"))
+Description: This package is an adaptation of an excellent beamer presentation template developed by Steven V. Miller. 
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    tidyverse, 
+    stevemisc, 
+    tikzDevice, 
+    kableExtra, 
+    gridExtra
+RoxygenNote: 7.1.0
